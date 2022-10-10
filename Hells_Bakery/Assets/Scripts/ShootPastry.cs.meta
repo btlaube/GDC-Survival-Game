@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: d339ef0f66b039444883e6ec3c6fe53b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - pastry: {fileID: 2982463758012030999, guid: b9498627faace4a43850055809b05cfa, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
