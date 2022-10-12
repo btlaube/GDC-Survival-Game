@@ -18,7 +18,7 @@ public class ShootPastry : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject pastryshot = Instantiate(pastry, transform.position, transform.rotation);
-            pastryshot.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, launchVelocity));
+            pastryshot.GetComponent<Rigidbody>().AddRelativeForce(gameObject.transform.forward * launchVelocity);
         }
     }
 
