@@ -23,6 +23,7 @@ public class ShootPastry : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1"))
         {
+            direction.y = 0f;
             GameObject pastryshot = Instantiate(pastry, transform.position, transform.rotation);
             pastryshot.GetComponent<Rigidbody>().AddRelativeForce(direction * launchVelocity);
         }

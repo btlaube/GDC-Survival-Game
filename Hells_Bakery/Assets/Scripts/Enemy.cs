@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
 
     void Update() {
         enemy.SetDestination(player.position);
+        transform.Rotate(45, 0, 0);
     }
 
     void OnTriggerEnter(Collider other) {
