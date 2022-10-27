@@ -10,7 +10,8 @@ public class CameraFollow : MonoBehaviour
     public float minZ;
     public float maxX;
     public float maxZ;
-    public static CameraFollow instance;
+    public float cameraHeight;
+    public static CameraFollow instance;    
 
     [SerializeField] private Transform camTarget;
 
@@ -29,11 +30,11 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate() {
         if (camTarget != null) {
             var newPos = Vector3.Lerp(transform.position, new Vector3(camTarget.position.x, transform.position.y, camTarget.position.z - 10f), Time.deltaTime * trackingSpeed);
-            var camPosition = new Vector3(newPos.x, 10f, newPos.z);
+            var camPosition = new Vector3(newPos.x, cameraHeight, newPos.z);
             var v3 = camPosition;
             var clampX = Mathf.Clamp(v3.x, minX, maxX);
             var clampZ = Mathf.Clamp(v3.z, minZ, maxZ);
-            transform.position = new Vector3(clampX, 10f, clampZ);
+            transform.position = new Vector3(clampX, cameraHeight, clampZ);
         }
     }
 }
