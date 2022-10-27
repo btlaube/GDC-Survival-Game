@@ -5,17 +5,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5;
-    public Rigidbody rb;
-    //public Animator animator;
 
     private Vector3 movement;
     private SpriteRenderer sr;
     private Animator animator;
+    private Rigidbody rb;
 
     void Awake() {
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        //rb = GetComponent<Rigidbody2D>();     
+        rb = GetComponent<Rigidbody>();     
     }
 
     void Update()
@@ -23,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.z = Input.GetAxisRaw("Vertical");
 
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.z);
         animator.SetFloat("Speed", movement.sqrMagnitude);
         
         if (movement.x > 0.1f) {
@@ -31,9 +32,6 @@ public class PlayerMovement : MonoBehaviour
         else if (movement.x < -0.1f) {
             sr.flipX = false;
         }
-        //animator.SetFloat("Horizontal", movement.x);
-        //animator.SetFloat("Vertical", movement.z);
-        //animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     void FixedUpdate()
