@@ -7,15 +7,30 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5;
     public Rigidbody rb;
     //public Animator animator;
-    Vector3 movement;
 
+    private Vector3 movement;
+    private SpriteRenderer sr;
+    private Animator animator;
 
-    // Update is called once per frame
+    void Awake() {
+        sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        //rb = GetComponent<Rigidbody2D>();     
+    }
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.z = Input.GetAxisRaw("Vertical");
 
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+        
+        if (movement.x > 0.1f) {
+            sr.flipX = true;
+        }
+        else if (movement.x < -0.1f) {
+            sr.flipX = false;
+        }
         //animator.SetFloat("Horizontal", movement.x);
         //animator.SetFloat("Vertical", movement.z);
         //animator.SetFloat("Speed", movement.sqrMagnitude);
