@@ -11,7 +11,6 @@ public class ProjectileScript : MonoBehaviour
 
     void Update() {
         timer += Time.deltaTime;
-        // Convert integer to string
         if (timer >= lifeSpan) {
             Destroy(gameObject);
         }
