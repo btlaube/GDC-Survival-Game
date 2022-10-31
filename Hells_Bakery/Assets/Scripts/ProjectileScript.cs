@@ -6,7 +6,7 @@ public class ProjectileScript : MonoBehaviour
     private float timer;
 
     void Start() {
-        float timer = Time.deltaTime;
+        timer = Time.deltaTime;
     }
 
     void Update() {
