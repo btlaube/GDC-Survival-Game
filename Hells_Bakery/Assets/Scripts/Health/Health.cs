@@ -49,4 +49,11 @@ public class Health : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    public void Update() {
+        if(dead) {
+            Debug.Log("enemy died");
+            Deactivate();
+        }
+    }
 }
