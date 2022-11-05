@@ -17,4 +17,20 @@ public class CanvasGroupScript : MonoBehaviour
     
         DontDestroyOnLoad(gameObject);
     }
+
+    public void LoadMainMenu() {
+        foreach(Transform canvas in transform) {
+            canvas.gameObject.SetActive(false);
+        }
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(true);
+    }
+
+    public void LoadGameScene() {
+        foreach(Transform canvas in transform) {
+            canvas.gameObject.SetActive(false);
+        }
+        transform.GetChild(0).gameObject.SetActive(true);
+    }
+
 }
