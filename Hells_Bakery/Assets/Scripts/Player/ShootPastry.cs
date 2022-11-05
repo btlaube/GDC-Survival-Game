@@ -6,13 +6,13 @@ public class ShootPastry : MonoBehaviour
 {
     public GameObject pastry;
     public float launchVelocity = 1f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    AudioManager audioManager;
+
+    void Start() {
+        audioManager = AudioManager.instance;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -24,6 +24,7 @@ public class ShootPastry : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             direction.y = 0f;
+            audioManager.Play("Throw");
             GameObject pastryshot = Instantiate(pastry, transform.position, transform.rotation);
             pastryshot.GetComponent<Rigidbody>().AddRelativeForce(direction * launchVelocity);
         }
