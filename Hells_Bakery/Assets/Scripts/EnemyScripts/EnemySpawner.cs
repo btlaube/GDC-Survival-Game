@@ -3,7 +3,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    public GameObject[] enemies;
+    public EnemyObject[] enemies;
+    public GameObject enemy;
 
     [SerializeField] private float numObjects = 10f;
     [SerializeField] private int xRange = 5;
@@ -26,7 +27,18 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemies() {        
         for (int i = 0; i <= numObjects; i++) {
-            int rand = Random.Range(0, enemies.Length);
+            //Pick which enemy to spawn with varying probability
+            int whichEnemy = Random.Range(0, 100);
+            if(whichEnemy <= 70) {
+                whichEnemy = 0;
+            }
+            else if(whichEnemy <= 90) {
+                whichEnemy = 1;
+            }
+            else {
+                whichEnemy = 2;
+            }
+
             int randX;
             int randZ;
             bool extremeAxis = Random.value > 0.5;
@@ -49,9 +61,10 @@ public class EnemySpawner : MonoBehaviour
                 }
                 randX = Random.Range(-xRange, xRange + 1);
             }
-            Debug.Log(extremeAxis.ToString()  + " " + randX.ToString()  + " " + randZ.ToString());
             Vector3 spawnPosition = new Vector3(randX, transform.position.y, randZ);
-            Instantiate(enemies[rand], spawnPosition, Quaternion.identity, transform);
+            GameObject newEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity, transform);
+            newEnemy.GetComponent<SpriteRenderer>().sprite = enemies[whichEnemy].sprite;
+            newEnemy.GetComponent<Transform>().localScale = new Vector3(enemies[whichEnemy].scale, enemies[whichEnemy].scale, enemies[whichEnemy].scale);
         }
     }
 }
