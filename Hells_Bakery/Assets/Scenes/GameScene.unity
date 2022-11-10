@@ -157,7 +157,7 @@ MonoBehaviour:
   numObjects: 10
   xRange: 50
   zRange: 50
-  spawnRate: 10
+  spawnRate: 1
 --- !u!4 &54494259
 Transform:
   m_ObjectHideFlags: 0
@@ -1055,6 +1055,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4483678227552974346, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 19.22998
+      objectReference: {fileID: 0}
     - target: {fileID: 5413564927913162177, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
       propertyPath: m_Name
       value: CanvasGroup
