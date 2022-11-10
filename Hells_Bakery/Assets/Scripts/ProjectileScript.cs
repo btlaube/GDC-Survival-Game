@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour
 {
-    [SerializeField] private float damage;
+    [SerializeField] private float damage = 10f;
     [SerializeField] private float lifeSpan = 5f;
     private float timer;
 
@@ -18,7 +18,6 @@ public class ProjectileScript : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        damage = 1;
         if(other.gameObject.tag == "Enemy") {
             Debug.Log("hit an enemy");
             other.gameObject.GetComponentInParent<Health>().TakeDamage(damage);

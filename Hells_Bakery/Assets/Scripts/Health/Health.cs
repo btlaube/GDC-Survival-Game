@@ -44,9 +44,6 @@ public class Health : MonoBehaviour
     }
 
     public void Deactivate() {
-        if(transform.parent != null) {
-            Destroy(transform.parent.gameObject);
-        }
         Destroy(gameObject);
     }
 
