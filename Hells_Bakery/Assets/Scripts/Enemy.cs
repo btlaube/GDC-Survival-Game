@@ -4,8 +4,13 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float damage;
-    public Transform player;
-    public NavMeshAgent enemy;
+    private Transform player;
+    private NavMeshAgent enemy;
+
+    void Start() {
+        player = GameObject.Find("Player").transform;
+        enemy = gameObject.GetComponent<NavMeshAgent>();
+    }
 
     void Update() {
         enemy.SetDestination(player.position);

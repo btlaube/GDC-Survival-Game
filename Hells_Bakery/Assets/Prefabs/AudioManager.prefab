@@ -47,7 +47,13 @@ MonoBehaviour:
   sounds:
   - name: MainTheme
     clip: {fileID: 8300000, guid: aafb8b25a759ba8499f91025069415e0, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: Throw
+    clip: {fileID: 8300000, guid: da0bc26fcb0db1d48bf83ae93d86100c, type: 3}
+    volume: 0.059
+    pitch: 0.9
+    loop: 0
     source: {fileID: 0}
