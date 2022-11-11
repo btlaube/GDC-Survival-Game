@@ -6,10 +6,10 @@ public class EnemySpawner : MonoBehaviour
     public EnemyObject[] enemies;
     public GameObject enemy;
 
-    [SerializeField] private float numObjects = 10f;
+    [SerializeField] private float waveSize = 10f;
     [SerializeField] private int xRange = 5;
     [SerializeField] private int zRange = 5;
-    [SerializeField] private float spawnRate = 5f;
+    [SerializeField] private float waveRate = 5f;
     private float timer;
 
     void Start() {
@@ -19,14 +19,14 @@ public class EnemySpawner : MonoBehaviour
 
      void Update() {
         timer += Time.deltaTime;
-        if (timer >= spawnRate) {
+        if (timer >= waveRate) {
             SpawnEnemies();
             timer = Time.deltaTime;  
         }
     }
 
     public void SpawnEnemies() {        
-        for (int i = 0; i <= numObjects; i++) {
+        for (int i = 0; i <= waveSize; i++) {
             //Pick which enemy to spawn with varying probability
             int whichEnemy = Random.Range(0, 100);
             if(whichEnemy <= 70) {
