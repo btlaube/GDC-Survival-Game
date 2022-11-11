@@ -542,10 +542,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackingSpeed: 5
-  minX: -100
-  minZ: -100
-  maxX: 100
-  maxZ: 100
+  minX: -50
+  minZ: -50
+  maxX: 50
+  maxZ: 50
   cameraHeight: 20
   camTarget: {fileID: 1759855645}
 --- !u!1 &1446510736
@@ -695,7 +695,7 @@ RectTransform:
   m_GameObject: {fileID: 1530645007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1049,10 +1049,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4473838517631964819, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: slowedTimeScale
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 5413564927913162177, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
       propertyPath: m_Name
       value: CanvasGroup
