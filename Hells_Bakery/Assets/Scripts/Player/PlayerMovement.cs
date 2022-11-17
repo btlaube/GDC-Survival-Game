@@ -6,7 +6,6 @@ using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5;
-    //public Animator animator;
     public float score;
     public TextMeshProUGUI scoreText;
 

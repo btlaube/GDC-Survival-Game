@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] private float damage;
     private Transform player;
