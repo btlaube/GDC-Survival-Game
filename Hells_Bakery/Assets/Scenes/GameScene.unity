@@ -237,8 +237,7 @@ Transform:
   m_LocalPosition: {x: -4.69, y: 1.2, z: 5.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1402833748}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
@@ -872,6 +871,26 @@ PrefabInstance:
     - target: {fileID: 1360592180117432914, guid: 9bfe2186c4cf86f4eaa175bed4afe015, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820408881488396403, guid: 9bfe2186c4cf86f4eaa175bed4afe015, type: 3}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820408881488396403, guid: 9bfe2186c4cf86f4eaa175bed4afe015, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4907630213ccbd9498e752032722813f, type: 3}
+    - target: {fileID: 1820408881488396403, guid: 9bfe2186c4cf86f4eaa175bed4afe015, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Chirp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820408881488396403, guid: 9bfe2186c4cf86f4eaa175bed4afe015, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820408881488396403, guid: 9bfe2186c4cf86f4eaa175bed4afe015, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6888620256091330383, guid: 9bfe2186c4cf86f4eaa175bed4afe015, type: 3}
       propertyPath: m_Name
@@ -1624,10 +1643,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackingSpeed: 5
-  minX: -100
-  minZ: -100
-  maxX: 100
-  maxZ: 100
+  minX: -50
+  minZ: -50
+  maxX: 50
+  maxZ: 50
   cameraHeight: 20
   camTarget: {fileID: 1759855645}
 --- !u!1 &1035964778
@@ -2320,7 +2339,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f83742c1a67138943abf01e476453232, type: 2}
+  - {fileID: 2100000, guid: 3d3cfaf39e0c76d4aa92cab8d46085df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2367,7 +2386,7 @@ RectTransform:
   m_GameObject: {fileID: 1530645007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3504,10 +3523,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4483678227552974346, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 19.22998
-      objectReference: {fileID: 0}
     - target: {fileID: 5413564927913162177, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
       propertyPath: m_Name
       value: CanvasGroup
