@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 4208f6b3e9695414983c63fe37b18325, type: 3}
   scale: 1
+  attackDamage: 1

@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e78390e3509267b4c9fd6dd7fb6cdbdc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d22e75240bf07f4d8205a0acd03744e, type: 3}
   m_Name: Imp_Chief
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a1a73a4a2d0801448b75bcd45e02dbef, type: 3}
   scale: 0.9
+  attackDamage: 3
+  hasAbility: 1
+  enemyToSpawn: {fileID: 2902589570731922981, guid: 73476071f866b034baec34e70d150dc8, type: 3}
+  enemyToSpawnObject: {fileID: 11400000, guid: 5c20790e665ef6b49a65e1209e61e02b, type: 2}

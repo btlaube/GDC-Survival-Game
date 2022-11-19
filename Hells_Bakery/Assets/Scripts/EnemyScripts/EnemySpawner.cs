@@ -63,8 +63,7 @@ public class EnemySpawner : MonoBehaviour
             }
             Vector3 spawnPosition = new Vector3(randX, transform.position.y, randZ);
             GameObject newEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity, transform);
-            newEnemy.GetComponent<SpriteRenderer>().sprite = enemies[whichEnemy].sprite;
-            newEnemy.GetComponent<Transform>().localScale = new Vector3(enemies[whichEnemy].scale, enemies[whichEnemy].scale, enemies[whichEnemy].scale);
+            newEnemy.GetComponent<EnemyBehavior>().enemyObject = enemies[whichEnemy];
         }
     }
 }
