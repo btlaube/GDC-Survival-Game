@@ -7,4 +7,8 @@ public class EnemyObject : ScriptableObject
 {
     public Sprite sprite;
     public float scale;
+    public float attackDamage;
+    public float attackSpeed;
+    public float movementSpeed;
+
 }
