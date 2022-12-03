@@ -17,7 +17,7 @@ public class ShootPastry : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector3 direction = new Vector3(0, 0, 1);
-        if (Physics.Raycast(ray, out RaycastHit hit, 30f))
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
             direction = hit.point - transform.position;
         }

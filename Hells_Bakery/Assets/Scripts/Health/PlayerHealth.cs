@@ -40,10 +40,12 @@ public class PlayerHealth : MonoBehaviour
         //clear all enemies
         currentHealth = 10f;
         GetComponent<PlayerMovement>().score = 0f;
-        Transform enemySpawner = GameObject.Find("EnemySpawner").GetComponent<Transform>();
-        foreach (Transform enemy in enemySpawner) {
+        GameObject enemySpawner = GameObject.Find("EnemySpawner");
+        foreach (Transform enemy in enemySpawner.GetComponent<Transform>()) {
             Destroy(enemy.gameObject);
         }
+        enemySpawner.GetComponent<EnemySpawner>().waveSize = 5f;
+        enemySpawner.GetComponent<EnemySpawner>().waveRate = 5f;
     }
 
     public void Update() {

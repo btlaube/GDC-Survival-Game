@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pastry: {fileID: 2982463758012030998, guid: b9498627faace4a43850055809b05cfa, type: 3}
-  launchVelocity: 1000
+  launchVelocity: 500
 --- !u!1 &1530645007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,45 +1476,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 374797446405065091, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 374797446405065091, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 374797446405065091, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1238828636}
-    - target: {fileID: 374797446405065091, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 374797446405065091, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 374797446405065091, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: LevelLoaderScript, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 374797446405065091, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2714772898368542831, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3178012678474098242, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3987603141247759846, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5413564927913162177, guid: 1078ba1f341821941b0b49e8feb30274, type: 3}
       propertyPath: m_Name
       value: CanvasGroup
@@ -1616,14 +1580,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4365500073379197627, guid: 59de7b48bf6bca24099b7f0bc91322e6, type: 3}
-      propertyPath: waveSize
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4365500073379197627, guid: 59de7b48bf6bca24099b7f0bc91322e6, type: 3}
-      propertyPath: enemies.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4339842a3958ac84da25f23d6bcd6050, type: 2}
     - target: {fileID: 4365500073379197628, guid: 59de7b48bf6bca24099b7f0bc91322e6, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
