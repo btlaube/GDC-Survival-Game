@@ -27,6 +27,9 @@ public class CanvasGroupScript : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.LeftShift)) {
             CloseSelectMenu();
         }
+        if (Input.GetKey(KeyCode.P)) {
+            OpenPauseMenu();
+        }
     }
 
     public void LoadMainMenu() {
@@ -42,6 +45,8 @@ public class CanvasGroupScript : MonoBehaviour
             canvas.gameObject.SetActive(false);
         }
         transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(2).gameObject.SetActive(true);
+        transform.GetChild(4).gameObject.SetActive(true);
     }
 
     private void OpenSelectMenu() {
@@ -53,6 +58,16 @@ public class CanvasGroupScript : MonoBehaviour
         Time.timeScale = 1f;
         this.gameObject.transform.GetChild(3).GetChild(1).GetComponent<InventoryDial>().SetSelection();
         this.gameObject.transform.GetChild(3).gameObject.SetActive(false);
+    }
+
+    public void OpenPauseMenu() {
+        Time.timeScale = 0f;
+        transform.GetChild(5).gameObject.SetActive(true);
+    }
+
+    public void ClosePauseMenu() {
+        Time.timeScale = 1f;
+        transform.GetChild(5).gameObject.SetActive(false);
     }
 
 }

@@ -19,7 +19,6 @@ public class ProjectileScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Enemy") {
-            Debug.Log("hit an enemy");
             other.gameObject.GetComponentInParent<Health>().TakeDamage(damage);
         }
     }

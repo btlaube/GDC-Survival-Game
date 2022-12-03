@@ -8,6 +8,8 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private float damage;
     private Transform player;
     private NavMeshAgent enemy;
+    public float attackCooldown;
+    private float attackTimer;
     
 
     void Start() {
@@ -16,24 +18,21 @@ public class EnemyBehavior : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = enemyObject.sprite;
         transform.localScale = new Vector3(enemyObject.scale, enemyObject.scale, enemyObject.scale);
         damage = enemyObject.attackDamage;
+        attackTimer = Time.deltaTime;
     }
 
     void Update() {
+        attackTimer += Time.deltaTime;
         enemy.SetDestination(player.position);
         transform.Rotate(60, 0, 0);
     }
 
     void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "Player") {
-            Debug.Log("hit a player");
-            other.gameObject.GetComponentInParent<Health>().TakeDamage(damage);
-        }
+        if (attackTimer >= attackCooldown){
+            if(other.gameObject.tag == "Player") {
+                other.gameObject.GetComponentInParent<PlayerHealth>().TakeDamage(damage);
+                attackTimer = Time.deltaTime;
+            }
+        }        
     }
-
-    //public void Ability() {
-    //    enemyObject = (EnemyWithAbilityObject)(enemyObject);
-    //    GameObject newEnemy = Instantiate(enemyObject.enemyToSpawn, transform.position, Quaternion.identity, transform);
-    //    newEnemy.GetComponent<EnemyBehavior>().enemyObject = enemyObject.enemyToSpawnObject;
-    //}
-
 }

@@ -7,7 +7,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5;
     public float score;
+    public float highscore;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highscoreText;
 
     private Vector3 movement;
     private SpriteRenderer sr;
@@ -17,15 +19,25 @@ public class PlayerMovement : MonoBehaviour
     void Awake() {
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();     
+        rb = GetComponent<Rigidbody>();
+        scoreText = GameObject.Find("Score Text").GetComponent<TextMeshProUGUI>();   
+        highscoreText = GameObject.Find("Highscore Text").GetComponent<TextMeshProUGUI>();   
+    }
+
+    void Start() {
+        score = Time.deltaTime;
     }
 
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.z = Input.GetAxisRaw("Vertical");
-        score = score + 1;
-        scoreText.text = "Score: " + score.ToString();
+        score += Time.deltaTime;
+        if(score > highscore) {
+            highscore = score;
+        }
+        scoreText.text = "Score: " + Mathf.Floor(score).ToString();
+        highscoreText.text = "Highscore: " + Mathf.Floor(highscore).ToString();
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.z);

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2902589570731922969}
   - component: {fileID: 2902589570731922970}
   - component: {fileID: 2902589570731922971}
-  - component: {fileID: 2902589570731922972}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -119,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyObject: {fileID: 0}
   damage: 1
+  attackCooldown: 2
 --- !u!195 &2902589570731922970
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -157,19 +157,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &2902589570731922972
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2902589570731922981}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2902589572444967731
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +169,7 @@ GameObject:
   - component: {fileID: 2902589572444967735}
   - component: {fileID: 2902589572444967734}
   - component: {fileID: 2902589572444967733}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy Collision
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -265,5 +252,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.07, y: 5.48, z: 1.95}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 5, z: 2}
+  m_Center: {x: 0, y: -0.14, z: 0}
