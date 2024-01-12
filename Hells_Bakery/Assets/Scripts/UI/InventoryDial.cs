@@ -84,10 +84,13 @@ public class InventoryDial : MonoBehaviour
                 DeactivateItem(item);
             }
         }
+        transform.GetChild(5).gameObject.SetActive(true);
+        transform.GetChild(6).gameObject.SetActive(true);
+        transform.GetChild(7).gameObject.SetActive(true);
     }
 
     private void ActivateItem(Transform item) {
-        audioManager.Play("Chirp");
+        //audioManager.Play("Chirp");
         item.gameObject.SetActive(true);
         item.localScale = activeScale;
         activeItem = item;
@@ -101,7 +104,7 @@ public class InventoryDial : MonoBehaviour
     public void SetSelection() {
         foreach(Transform item in transform) {
             if(item.gameObject.activeSelf) {
-                Debug.Log(item);
+                //Debug.Log(item);
             }
         }
     }
